@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Постільна білизна вашої мрії</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Постільна білизна вашої мрії</h1>
+      <p>Комфорт, стиль і ніжність для вашої оселі</p>
+      <a href="#order" class="btn">Купити зараз</a>
+    </div>
+  </section>
+
+  <section class="features container">
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">🛡️</div>
+        <h3>Висока якість</h3>
+        <p>Натуральні матеріали та приємна на дотик тканина</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🚚</div>
+        <h3>Швидка доставка</h3>
+        <p>Відправка по Україні за 1–2 дні</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✅</div>
+        <h3>Гарантія 100%</h3>
+        <p>Обмін та повернення без зайвих складнощів</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Популярні комплекти</h2>
+
+      <div class="products">
+        <article class="card">
+          <img id="mainImage1" class="main-image" src="photo1.jpg" alt="Зелений рубін" />
+          <div class="thumbs">
+            <img src="photo1.jpg" alt="Зелений рубін фото 1" onclick="changeImage(this, 'mainImage1')" />
+            <img src="photo2.jpg" alt="Зелений рубін фото 2" onclick="changeImage(this, 'mainImage1')" />
+            <img src="photo3.jpg" alt="Зелений рубін фото 3" onclick="changeImage(this, 'mainImage1')" />
+          </div>
+          <div class="card-body">
+            <h3>Зелений рубін</h3>
+            <div class="price">850 грн</div>
+            <a href="#order" class="btn">Детальніше</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img id="mainImage2" class="main-image" src="photo1.jpg" alt="Смужки блю" />
+          <div class="thumbs">
+            <img src="photo1.jpg" alt="Смужки блю фото 1" onclick="changeImage(this, 'mainImage2')" />
+            <img src="photo2.jpg" alt="Смужки блю фото 2" onclick="changeImage(this, 'mainImage2')" />
+            <img src="photo3.jpg" alt="Смужки блю фото 3" onclick="changeImage(this, 'mainImage2')" />
+          </div>
+          <div class="card-body">
+            <h3>Смужки блю</h3>
+            <div class="price">920 грн</div>
+            <a href="#order" class="btn">Детальніше</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img id="mainImage3" class="main-image" src="photo1.jpg" alt="Рожевий флор" />
+          <div class="thumbs">
+            <img src="photo1.jpg" alt="Рожевий флор фото 1" onclick="changeImage(this, 'mainImage3')" />
+            <img src="photo2.jpg" alt="Рожевий флор фото 2" onclick="changeImage(this, 'mainImage3')" />
+            <img src="photo3.jpg" alt="Рожевий флор фото 3" onclick="changeImage(this, 'mainImage3')" />
+          </div>
+          <div class="card-body">
+            <h3>Рожевий флор</h3>
+            <div class="price">890 грн</div>
+            <a href="#order" class="btn">Детальніше</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="order">
+    <div class="container">
+      <div class="order-box">
+        <h2 class="section-title section-title--small">Оформити замовлення</h2>
+        <p>Залиште свої дані, і ми зв'яжемося з вами найближчим часом.</p>
+
+        <form class="form-grid" id="orderForm">
+          <input type="text" name="name" placeholder="Ваше ім'я" required />
+          <input type="tel" name="phone" placeholder="Ваш телефон" required />
+          <input type="email" name="email" placeholder="Ваш e-mail" required />
+          <button type="submit" class="btn btn-full">Замовити</button>
+        </form>
+
+        <div class="form-note">Ми гарантуємо конфіденційність ваших даних.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="payments">
+        <span>VISA</span>
+        <span>Mastercard</span>
+        <span>PayPal</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Про нас</a>
+        <a href="#">Доставка і оплата</a>
+        <a href="#">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
