@@ -16,9 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const originalText = button ? button.textContent : '';
 
     const formData = new FormData(form);
+
     const name = String(formData.get('name') || '').trim();
     const phone = String(formData.get('phone') || '').trim();
     const email = String(formData.get('email') || '').trim();
+    const product = String(formData.get('product') || 'Постільна білизна').trim();
+    const price = String(formData.get('price') || 'від 850 грн').trim();
 
     if (!name || !phone || !email) {
       alert('Будь ласка, заповніть усі поля.');
@@ -39,22 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const response = await fetch('/api/order', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, phone, email })
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          product,
+          price
+        })
       });
 
-      let data = null;
-      try { data = await response.json(); } catch (_) {}
+      const data = await response.json();
 
-      if (!response.ok || (data && data.ok === false)) {
-        throw new Error(data?.message || 'Помилка відправки');
+      if (!response.ok || !data.ok) {
+        throw new Error(data.message || 'Помилка відправки');
       }
 
-      alert('Дякуємо! Ваша заявка відправлена.');
+      alert('Дякуємо! Ваша заявка відправлена в Telegram.');
       form.reset();
     } catch (error) {
       console.error('Помилка відправки заявки:', error);
-      alert('Не вдалося відправити заявку.');
+      alert(error.message || 'Не вдалося відправити заявку.');
     } finally {
       if (button) {
         button.disabled = false;
