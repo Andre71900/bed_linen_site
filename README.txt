@@ -2,7 +2,7 @@ Vercel deploy
 
 1. Upload this folder to GitHub or import directly into Vercel.
 2. In Vercel project settings -> Environment Variables add:
-   TELEGRAM_BOT_TOKEN=your_bot_token
+   TELEGRAM_BOT_TOKEN=7741943551:AAEiJ0Me_JwTQJXXXZ7E7LZ4Vf2IzyfH2to
    TELEGRAM_CHAT_ID=584066273
 3. Deploy.
 4. Put your images next to index.html:
